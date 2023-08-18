@@ -1,6 +1,6 @@
 # SYS Clipboard
 
-#### Access the system clipboard
+#### Access the system clipboard (windows)
 
 ## Examples
 
