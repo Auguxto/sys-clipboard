@@ -2,7 +2,7 @@
 
 #### Access the system clipboard (windows)
 
-## Examples
+## Usage
 
 ```typescript
 import clipboard from "sys-clipboard";
