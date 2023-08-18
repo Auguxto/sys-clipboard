@@ -10,7 +10,8 @@ export function read(): string {
         return Buffer.from(
           child_process.execFileSync("src/exe/clipboard.exe", ["--read"])
         ).toString("utf-8");
-      } catch {
+      } catch (err) {
+        console.log(err);
         return "";
       }
 
@@ -30,7 +31,8 @@ export function write(text: string): boolean {
         ).toString("utf-8");
 
         return true;
-      } catch {
+      } catch (err) {
+        console.log(err);
         return false;
       }
 
