@@ -1,7 +1,7 @@
 import assert from "assert";
 import { describe, it } from "node:test";
 
-import clipboard from ".";
+import { clipboard } from "./index.js";
 
 describe("Clipboard test suite", () => {
   it("should write the clipboard", () => {

@@ -1,7 +1,7 @@
-declare function read(): string;
-declare function write(text: string): boolean;
+export declare function read(): string;
+export declare function write(text: string): boolean;
 declare const clipboard: {
     read: typeof read;
     write: typeof write;
 };
-export default clipboard;
+export { clipboard };

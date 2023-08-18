@@ -3,7 +3,7 @@ import os from "node:os";
 
 const platform = os.platform();
 
-function read(): string {
+export function read(): string {
   switch (platform) {
     case "win32":
       try {
@@ -19,7 +19,7 @@ function read(): string {
   }
 }
 
-function write(text: string): boolean {
+export function write(text: string): boolean {
   switch (platform) {
     case "win32":
       try {
@@ -44,4 +44,4 @@ const clipboard = {
   write,
 };
 
-export default clipboard;
+export { clipboard };

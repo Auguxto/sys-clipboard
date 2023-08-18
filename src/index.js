@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.clipboard = exports.write = exports.read = void 0;
 const node_child_process_1 = __importDefault(require("node:child_process"));
 const node_os_1 = __importDefault(require("node:os"));
 const platform = node_os_1.default.platform();
@@ -19,6 +20,7 @@ function read() {
             return "";
     }
 }
+exports.read = read;
 function write(text) {
     switch (platform) {
         case "win32":
@@ -35,8 +37,9 @@ function write(text) {
             return false;
     }
 }
+exports.write = write;
 const clipboard = {
     read,
     write,
 };
-exports.default = clipboard;
+exports.clipboard = clipboard;
